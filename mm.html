@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Snake Game</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1b1b1b;
+    margin: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  canvas {
+    background: #111;
+    border: 2px solid #00ff66;
+  }
+
+  h2 {
+    position: absolute;
+    top: 20px;
+  }
+</style>
+</head>
+<body>
+  <h2 id="score">Score: 0</h2>
+  <canvas id="gameBoard" width="400" height="400"></canvas>
+
+<script>
+const canvas = document.getElementById("gameBoard");
+const ctx = canvas.getContext("2d");
+const box = 20; // size of one block
+let score = 0;
+
+// Initial snake
+let snake = [{ x: 9 * box, y: 10 * box }];
+
+// Food position
+let food = {
+  x: Math.floor(Math.random() * 19 + 1) * box,
+  y: Math.floor(Math.random() * 19 + 1) * box,
+};
+
+// Snake direction
+let d;
+
+// control the snake
+document.addEventListener("keydown", direction);
+
+function direction(event) {
+  if (event.key === "ArrowLeft" && d !== "RIGHT") d = "LEFT";
+  else if (event.key === "ArrowUp" && d !== "DOWN") d = "UP";
+  else if (event.key === "ArrowRight" && d !== "LEFT") d = "RIGHT";
+  else if (event.key === "ArrowDown" && d !== "UP") d = "DOWN";
+}
+
+// collision check
+function collision(head, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (head.x === array[i].x && head.y === array[i].y) return true;
+  }
+  return false;
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw snake
+  for (let i = 0; i < snake.length; i++) {
+    ctx.fillStyle = i === 0 ? "#00ff66" : "#00cc44";
+    ctx.fillRect(snake[i].x, snake[i].y, box, box);
+  }
+
+  // Draw food
+  ctx.fillStyle = "#ff3333";
+  ctx.fillRect(food.x, food.y, box, box);
+
+  // old head position
+  let snakeX = snake[0].x;
+  let snakeY = snake[0].y;
+
+  // direction logic
+  if (d === "LEFT") snakeX -= box;
+  if (d === "UP") snakeY -= box;
+  if (d === "RIGHT") snakeX += box;
+  if (d === "DOWN") snakeY += box;
+
+  // check if snake eats food
+  if (snakeX === food.x && snakeY === food.y) {
+    score++;
+    document.getElementById("score").innerText = "Score: " + score;
+    food = {
+      x: Math.floor(Math.random() * 19 + 1) * box,
+      y: Math.floor(Math.random() * 19 + 1) * box,
+    };
+  } else {
+    snake.pop(); // remove tail
+  }
+
+  let newHead = { x: snakeX, y: snakeY };
+
+  // Game over conditions
+  if (
+    snakeX < 0 ||
+    snakeY < 0 ||
+    snakeX >= canvas.width ||
+    snakeY >= canvas.height ||
+    collision(newHead, snake)
+  ) {
+    clearInterval(game);
+    alert("Game Over! Your score: " + score);
+  }
+
+  snake.unshift(newHead);
+}
+
+// speed of snake
+let game = setInterval(draw, 100);
+</script>
+</body>
+</html>

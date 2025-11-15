@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add To Cart</h1>
+    <form id="'form">
+        <input type="text" id="name" placeholder="Item name"/>
+        <button type="Add">Add</button>
+        <ul id="itemList">
+  <!-- new <li> items will go here -->
+</ul>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const inputEl = document.getElementById('newItemInput');
+  const Add = document.getElementById('addButton');
+  const listEl = document.getElementById('itemList');
+
+  Add.addEventListener('click', function() {
+    const value = inputEl.value.trim();
+    if (value === '') {
+      alert('Please enter something');
+      return;
+    }
+    const li = document.createElement('li');
+    li.textContent = value;
+    listEl.appendChild(li);
+
+    // clear input after adding
+    inputEl.value = '';
+    inputEl.focus();
+  });
+
+  // Optionally: let user press “Enter” in input to also add
+  inputEl.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      Add.click();
+    }
+  });
+});
+</script>
+    </form>
+</body>
+</html>
