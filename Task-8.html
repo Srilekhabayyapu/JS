@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Text</title>
+    <style>
+        p {
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="myPara">This is my paragraph</p>
+
+    Life is <p>full of unexpected turns, and sometimes the road ahead seems unclear. Despite challenges, each day</p>
+
+    <script>
+        const para = document.getElementById("myPara");
+        const input = document.getElementById("myInput");
+
+        input.addEventListener("input", function () {
+            let typed = input.value.trim();           // user input
+            let original = para.innerText.trim();     // paragraph text
+
+            if (typed === original) {
+                para.style.color = "red";  // Change color only when matched
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction:column ; 
+        }
+        button{
+            width:100%;
+            padding:10px;
+            font-size: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="todosInput" placeholder="Enter todo"/>
+    <div>
+        <button onclick="addFirst()">Add First</button>
+        <button onclick="addLast()">Add Last</button>
+     </div>
+    <div>
+        <button onclick="Deletefirst()">Delete First</button>
+        <button onclick="DeleteLast()">Delete Last</button>
+    </div>
+    <div id="output">
+    </div>
+    <script>
+       let todos=["apple","banana","mango"]
+       function renderList(){
+        document.getElementById("output").textContent=todos.join(",")
+       }
+       function addFirst(){
+        const value=document.getElementById("todosInput").value.trim();
+            if (value){
+                todos.unshift(value);
+            document.getElementById("todosInput").value="";
+            renderList();
+       }
+    }
+       function addLast(){
+        const value=document.getElementById("todosInput").value.trim();
+        if(value){
+            todos.push(value);
+        document.getElementById("todosInput").value="";
+        renderList();
+       }
+    }
+       function Deletefirst(){
+            todos.shift();
+            renderList();
+       }
+       function DeleteLast(){
+            todos.pop();
+            renderList();
+       }
+       renderList();
+    </script> 
+</body>
+</html>

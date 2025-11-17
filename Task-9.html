@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div>
+          <h1>Add items</h1>
+          <input type="text" placeholder="additems">
+          <button onclick="additems()">Add</button>
+    </div>
+    <div id="itemscontainer"></div>
+  <script>
+    let arr=["birayani","paneer","chicken","mutton"]
+    function additems(){
+        let user_inputs=document.getElementsByTagName("input")
+        console.log(user_inputs[0].value)
+        arr.push(user_inputs[0].value)
+        console.log(arr)
+        user_inputs[0].value=""
+        display_items()
+    }
+    function display_items(){
+        let container=document.getElementById("itemscontainer")
+         container.innerHTML=""
+        for(let i=0;i<arr.length;i++){
+             console.log(arr[i])
+            let ele=document.createElement("div")
+             ele.innerText=arr[i]
+            container.appendChild(ele)
+            let delete_btn=document.createElement("button")
+            delete_btn.textContent="delete"
+            ele.appendChild(delete_btn)
+            delete_btn.onclick=function(){
+                arr.splice(i,1)
+                display_items()
+            }
+           
+        }
+    }
+    display_items()
+  </script>
+</body>
+</html>
