@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        person={
+    name:"virat",
+    score:2300,
+    no_of_centuries:100,
+    best_score:250,
+}
+// access
+// person.name
+// console.log(person)
+person["score"]
+console.log(person.score)
+// update
+person.name="sree"
+console.log(person)
+// delete
+delete person.score
+console.log(person)
+    </script>
+    
+</body>
+</html>
+var a=10;
+(function(){
+    console.log(a)
+    a=20;
+    console.log(a)
+})()

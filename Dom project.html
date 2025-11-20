@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: aqua;
+        }
+        button{
+            margin: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: #007bff;
+            border:none;
+        }
+        #studentContainer{
+            margin-top: 30px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card{
+            background-color: aliceblue;
+            padding: 20px;
+            width:280px;
+            border-radius: 20px;
+        }
+        .skills{
+            padding-left: 20px;
+            list-style: square;
+        }
+    </style>
+</head>
+<body>
+    <h1>STUDENT DICTIONARY</h1>
+    <button onclick="ShowStudents()">ShowStudents</button>
+    <div id="studentContainer"></div>
+    <script>
+        const students=[{
+            name:"srilekha",
+            age:20,
+            marks:100,
+            skills:["python","skills","css"],
+            address:{
+                city:"kodad",
+                pincode:508206
+            }
+        },
+         {
+            name:"Ramya",
+            age:23,
+            marks:80,
+            skills:["python","skills","css"],
+            address:{
+                city:"kodad",
+                pincode:508206
+            }
+        },
+         {
+            name:"Pavani",
+            age:21,
+            marks:100,
+            skills:["java","skills","css"],
+            address:{
+                city:"kodad",
+                pincode:508206
+            }
+        }
+    ];
+        function ShowStudents(){
+            const container=document.getElementById("studentContainer");
+            container.innerHTML="";
+            for(const student of students){
+                const card=document.createElement("div");
+                card.className="card";
+                card.innerHTML=
+                `<h3>${student.name}</h3>
+                <p><strong>Age:</strong>${student.age}</p>
+                <p><strong>Marks:</strong>${student.marks}</p>
+                <p><strong>Address:</strong>${student.address.city},${student.address.pincode}</p>
+                <p><strong>Skills:</strong></p>`;
+                const ul=document.createElement("ul");
+                ul.className="skills";
+                for(let skill of student.skills){
+                    const li=document.createElement("li")
+                    li.textContent=skill;
+                    ul.appendChild(li);
+                }
+                card.appendChild(ul);;
+                container.appendChild(card)
+        }
+    }
+        
+
+    </script>
+    
+</body>
+</html>
