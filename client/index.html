@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Posts</title>
+  <style>
+    body{
+      height:10px;
+      width:100px;
+    }
+    img {
+      height: 150px;
+      width: 150px;
+      display: block;
+      margin-bottom: 10px;
+    }
+  #container{
+      display:flex;
+      /* flex-wrap: wrap; */
+      /* flex-direction: column; */
+      gap:20px;
+      justify-content: center;
+      
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 8px;
+      width: 220px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      
+    }
+  </style>
+</head>
+<body>
+  <h1>Display all posts...</h1>
+  <button onclick="deleteData()">delete data</button>
+  <div id="container"></div>
+
+  <script>
+    async function deleteData() {
+      fetch("http://localhost:3000/products/1",{
+        method:"DELETE",
+       
+      })
+  }
+
+  //   let res=fetch("https://localhost:3000/products",options)
+  // }
+    async function getAllPosts() {
+      try {
+        // 🔁 Change URL temporarily to check if FakeStore works
+        let response = await fetch("https://fakestoreapi.com/products");
+        let data = await response.json();
+        console.log(data);
+
+        let container = document.getElementById("container");
+
+        data.forEach(post => {
+          let card = document.createElement("div");
+          card.classList.add("card");
+
+          let img = document.createElement("img");
+          img.src = post.image;
+          img.alt = "Product image";
+
+          let title = document.createElement("h3");
+          title.textContent = post.title;
+
+          let desc = document.createElement("p");
+          desc.textContent = post.description;
+
+          card.append(img, title, desc);
+          container.appendChild(card);
+        });
+      } catch (error) {
+        console.error("Error loading posts:", error);
+      }
+    }
+
+    getAllPosts();
+  </script>
+</body>
+</html>

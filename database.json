@@ -1,0 +1,271 @@
+{
+  "posts": [
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "react pots",
+      "views": 1000
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": "2",
+      "title": "Mens Casual Premium Slim Fit T-Shirts ",
+      "price": 22.3,
+      "description": "Slim-fit style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71-YXzeOuslL._AC_UL720_QL65_.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
+      "id": "3",
+      "title": "Mens Cotton Jacket",
+      "price": 55.99,
+      "description": "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, casual, street, outdoor, travel or date. A comfortable jacket.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71li-IxgXL._AC_UX679_.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": "4",
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "description": "The color could be slightly different between on the screen and in practice. Slim-fit style, contrast raglan long sleeve, three-button henley placket, stylish & comfortable.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
+      "id": "5",
+      "title": "John Hardy Women’s Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695,
+      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean’s pearl.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UY879_.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
+      "id": "6",
+      "title": "Solid Gold Petite Micropave",
+      "price": 168,
+      "description": "Small-but-mighty diamond-studded ring for everyday elegance.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
+    },
+    {
+      "id": "7",
+      "title": "White Gold Plated Princess",
+      "price": 9.99,
+      "description": "Classic princess-style earrings — timeless and affordable.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      }
+    },
+    {
+      "id": "8",
+      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "price": 10.99,
+      "description": "Stylish owl earrings — a quirky and fun fashion choice.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/51-U7MGSCNL._AC_UL640_QL65_.jpg",
+      "rating": {
+        "rate": 1.9,
+        "count": 100
+      }
+    },
+    {
+      "id": "9",
+      "title": "WD 2TB Elements Portable External Hard Drive",
+      "price": 64,
+      "description": "USB 3.0 external portable hard drive — reliable storage solution.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+      "rating": {
+        "rate": 3.3,
+        "count": 203
+      }
+    },
+    {
+      "id": "10",
+      "title": "SanDisk SSD PLUS 1TB Internal SSD",
+      "price": 109,
+      "description": "2.5\" SSD — faster boot up and overall system performance boost.",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
+    },
+    {
+      "id": "11",
+      "title": "Automatic Coffee Grinder Electric Burr Mill",
+      "price": 34.95,
+      "description": "Electric burr coffee grinder with adjustable grind size — perfect for home espresso or drip coffee.",
+      "category": "home appliances",
+      "image": "https://example.com/img/electric-coffee-grinder.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 87
+      }
+    },
+    {
+      "id": "12",
+      "title": "Wireless Bluetooth Over-Ear Headphones",
+      "price": 89.99,
+      "description": "Noise-cancelling over-ear headphones with up to 30 h battery life, ideal for music or work.",
+      "category": "electronics",
+      "image": "https://example.com/img/wireless-headphones.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 215
+      }
+    },
+    {
+      "id": "13",
+      "title": "Stainless Steel Water Bottle 1L",
+      "price": 19.99,
+      "description": "Durable 1-litre insulated water bottle — keeps drinks hot or cold for hours.",
+      "category": "kitchen & dining",
+      "image": "https://example.com/img/steel-water-bottle.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 142
+      }
+    },
+    {
+      "id": "14",
+      "title": "Yoga Mat Non-Slip 6mm",
+      "price": 24.5,
+      "description": "Comfortable non-slip yoga mat with cushioning — suitable for home workouts and yoga sessions.",
+      "category": "sports & fitness",
+      "image": "https://example.com/img/yoga-mat.jpg",
+      "rating": {
+        "rate": 4.3,
+        "count": 56
+      }
+    },
+    {
+      "id": "15",
+      "title": "Classic Leather Wallet – Brown",
+      "price": 29.99,
+      "description": "Genuine leather bifold wallet with card slots and coin pocket — timeless and durable.",
+      "category": "accessories",
+      "image": "https://example.com/img/leather-wallet.jpg",
+      "rating": {
+        "rate": 4,
+        "count": 98
+      }
+    },
+    {
+      "id": "16",
+      "title": "Organic Cotton Crew Socks (Pack of 5)",
+      "price": 14.99,
+      "description": "Soft and breathable organic cotton socks — comfortable for daily wear.",
+      "category": "clothing",
+      "image": "https://example.com/img/cotton-socks-pack.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 150
+      }
+    },
+    {
+      "id": "17",
+      "title": "LED Desk Lamp with Adjustable Brightness",
+      "price": 39.99,
+      "description": "Energy-efficient LED desk lamp with adjustable brightness levels — perfect for study or work desk.",
+      "category": "home office",
+      "image": "https://example.com/img/led-desk-lamp.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 76
+      }
+    },
+    {
+      "id": "18",
+      "title": "Smart Fitness Tracker Watch",
+      "price": 49.99,
+      "description": "Fitness tracker with heart-rate monitor, step counter, and 7-day battery life.",
+      "category": "electronics",
+      "image": "https://example.com/img/fitness-tracker.jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 89
+      }
+    },
+    {
+      "id": "19",
+      "title": "Ceramic Dinnerware Set – 16 pieces",
+      "price": 79.95,
+      "description": "Elegant ceramic dinner set for 4 — includes plates, bowls, and mugs.",
+      "category": "home & kitchen",
+      "image": "https://example.com/img/ceramic-dinner-set.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 65
+      }
+    },
+    {
+      "id": "20",
+      "title": "Hardcover Notebook A5 – 200 Pages",
+      "price": 9.99,
+      "description": "Durable hardcover notebook with 200 ruled pages — ideal for notes, journal or sketch.",
+      "category": "stationery",
+      "image": "https://example.com/img/hardcover-notebook.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 210
+      }
+    },
+    {
+      "id": "21",
+      "title": "dell laptops ",
+      "price": 5700.95,
+      "description": "Slim-fit style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71-YXzeOuslL._AC_UL720_QL65_.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    }
+  ]
+}
